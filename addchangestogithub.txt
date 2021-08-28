@@ -3,5 +3,8 @@ cd /c/Users/Пользователь/Desktop/programs/mysite/arrow_game_flask
 
 #Save changes in a new version
 git add .
-git commit -am "Version 12.08.2021"
+git commit -am "Verson ..."
 git push
+
+#How to check previous versions
+#Go to version - browse files - download ZIP

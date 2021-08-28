@@ -1,1 +1,18 @@
-<h1>Changed</h1>
+<center>
+    <h1>Changed</h1>
+</center>
+<canvas id="myCanvas" width="500" height="500">
+</canvas>
+<script>
+var canvas = document.querySelector("canvas");
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "#DF8B7A";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+var image = new Image();
+image.src = "./static/img/hogweed.jpg"
+image.onload = () => {
+  ctx.drawImage(image, 10, 10)
+}
+</script>
