@@ -1,0 +1,7 @@
+#Set the folder
+cd /c/Users/Пользователь/Desktop/programs/mysite/arrow_game_flask
+
+#Save changes in a new version
+git add .
+git commit -am "Version 12.08.2021"
+git push
