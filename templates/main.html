@@ -11,8 +11,50 @@ var ctx = canvas.getContext("2d");
 ctx.fillStyle = "#DF8B7A";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 var image = new Image();
-image.src = "./static/img/hogweed.jpg"
-image.onload = () => {
-  ctx.drawImage(image, 10, 10)
+var xPos = 40;
+var yPos = 50;
+image.src = "./static/img/duckman.jpg"
+ctx.drawImage(image, xPos, yPos)
+
+/*image.onload = () => {
+  ctx.drawImage(image, xPos, yPos)
+}*/
+
+/*function move(e){
+  //alert(e.keyCode);
+  if(e.keyCode=39){
+    xPos+=5; 
+  }
+  if(e.keyCode=37){
+    xPos-=5; 
+  }
+  image.src = "./static/img/hogweed.jpg"
+  ctx.drawImage(image, xPos, yPos)
+  image.onload = () => {
+   ctx.drawImage(image, xPos, yPos)
+  }
+  //ctx.stroke(); //обводка
+}*/
+//document.onkeydown = move;
+
+document.addEventListener("keydown",function(e){
+  if(e.keyCode==39){
+    //alert(e.keyCode);  
+    xPos+=10;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#DF8B7A";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    //var el = document.getElementById('imageoncanvas');
+    //el.parentNode.removeChild(el);
+    ctx.drawImage(image, xPos, yPos) 
+  }
+  if(e.keyCode==37){
+    xPos-=10;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "#DF8B7A";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(image, xPos, yPos)  
+  }
 }
+)
 </script>
